@@ -11,7 +11,7 @@ export default [
   pluginReact.configs.flat.recommended,
   prettierRecommended,
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx,css,scss}'],
     languageOptions: { globals: globals.browser },
     plugins: {},
     rules: {
