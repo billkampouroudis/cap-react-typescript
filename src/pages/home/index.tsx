@@ -1,37 +1,37 @@
 import { useState } from 'react';
 import reactLogo from '../../assets/react.svg';
 import viteLogo from '/vite.svg';
-import { Button } from '@mantine/core';
+import { Button, Paper } from '@mantine/core';
+import SimpleLayout from '../../components/layouts/SimpleLayout/SimpleLayout';
 
 function HomePage() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+    <SimpleLayout>
+      <Paper shadow="sm" p={{ base: 'md', md: 'lg' }}>
+        <div>
+          <a href="https://vite.dev" target="_blank" rel="noreferrer">
+            <img src={viteLogo} className="logo" alt="Vite logo" />
+          </a>
+          <a href="https://react.dev" target="_blank" rel="noreferrer">
+            <img src={reactLogo} className="logo react" alt="React logo" />
+          </a>
+        </div>
 
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button variant="filled" ml="xl" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
+        <h1>Vite + React</h1>
+        <div className="card">
+          <Button variant="filled" onClick={() => setCount((count) => count + 1)}>
+            count is {count}
+          </Button>
+          <p>
+            Edit <code>src/App.tsx</code> and save to test HMR
+          </p>
+        </div>
 
-      <p className="read-the-docs">
-        Click on the Vite and React logos to leaadasdadas sadad asdasd sadsadas asdsd as ddasd asd asdas ddas ad as dsad
-        as das rn more
-      </p>
-    </>
+        <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      </Paper>
+    </SimpleLayout>
   );
 }
 

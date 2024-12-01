@@ -11,14 +11,24 @@ export default [
   pluginReact.configs.flat.recommended,
   prettierRecommended,
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx,css,scss}'],
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    ignores: [
+      'node_modules/',
+      'dist/',
+      'build/',
+      'public/',
+      'ios/',
+      'android/',
+      '.vite/',
+      'coverage/',
+    ],
     languageOptions: { globals: globals.browser },
     plugins: {},
     rules: {
       'prettier/prettier': 'warn',
       semi: ['warn', 'always'],
       'react/react-in-jsx-scope': 'off',
-      'max-len': ['error', { code: 120 }],
+      'max-len': ['error', { code: 100 }],
     },
     settings: {
       react: {
